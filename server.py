@@ -3,12 +3,12 @@ from pydantic import BaseModel
 import os, re
 from typing import Dict, List, Tuple
 
-# ---------- Models ----------
+# Models
 class RunRequest(BaseModel):
     tool: str
     input: Dict = {}
 
-# ---------- Color utils ----------
+# Color utils
 HEX_RE = re.compile(r"^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$")
 
 def _hex_to_rgb(hex_code: str) -> Tuple[int, int, int]:
